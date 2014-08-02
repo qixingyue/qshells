@@ -4,3 +4,8 @@ make
 
 cd utils
 ./install_server.sh
+
+
+shutdown
+
+redis-cli shutdown
