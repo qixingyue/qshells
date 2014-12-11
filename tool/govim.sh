@@ -66,4 +66,12 @@ EOF
 go get -u github.com/jstemmer/gotags
 
 echo "Please open vim and use command \":BundleInstall\" install other plugin"
-sleep 5
+
+
+cd $GOPATH/src
+wget http://2.anyapi.sinaapp.com/bkfiles/go_def_code.google.com.zip
+unzip go_def_code.google.com.zip
+cd code.google.com/p/rog-go/exp/godef
+go build 
+go install
+sleep 3 
