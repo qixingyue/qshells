@@ -1,9 +1,10 @@
 #!/bin/sh
 
+name=$1
 
 android create project \
 --target 1 \
---name MyAndroidApp \
---path ./MyAndroidAppProject \
---activity MyAndroidAppActivity \
---package com.example.myandroid 
+--name $1 \
+--path ./$1 \
+--activity $1Activity \
+--package com.xingyue.$1
