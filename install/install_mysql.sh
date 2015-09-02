@@ -1,5 +1,6 @@
 #! /bin/sh
 
+ #yum install boost boost-devel boost-doc
 #useradd mysql -r -d /dev/null -s /sbinlogin 
 
 MYSQL_PREFIX=/data0/mysql5536
