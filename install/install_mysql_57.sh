@@ -32,3 +32,10 @@ MYSQL_PREFIX=/data0/mysql
 # cp support-files/my-medium.cnf "$MYSQL_PREFIX/my.cnf"
 cp my.cnf "$MYSQL_PREFIX/my.cnf"
 
+
+
+###########
+# 初始化库及修改密码
+#/data0/mysql/bin/mysqld --initialize --explicit_defaults_for_timestamp 
+# 会出现一个随机的密码
+#mysql> alter user 'root'@'localhost' IDENTIFIED BY '123';
