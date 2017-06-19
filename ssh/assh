@@ -1,0 +1,30 @@
+#!/usr/bin/expect
+
+trap {
+ set rows [stty rows]
+ set cols [stty columns]
+ stty rows $rows columns $cols < $spawn_out(slave,name)
+} WINCH
+
+set mode [lindex $argv 0]  
+
+set user xingyue
+
+switch $mode {
+    "" {
+        set ip ""
+        set pwd ""
+    }
+    "www" {
+        set ip ""
+        set pwd ""
+    }
+}
+
+set timeout 3600
+spawn ssh $user@$ip
+expect "*password:"
+send "$pwd\r"
+expect "*PASSCODE:"
+interact
+
